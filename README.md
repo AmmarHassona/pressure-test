@@ -43,7 +43,7 @@ It stress-tests any decision by building the strongest case for and against, com
 
 ## 🚀 Installation
 
-1. Download **`pressure-test.skill`** from the [releases page](../../releases/latest)
+1. Download **`pressure-test.skill`**
 2. Go to [claude.ai](https://claude.ai) → **Settings** → **Skills**
 3. Click **Upload skill** and select the downloaded file
 4. Done — activates automatically when you describe any decision to Claude
