@@ -1,7 +1,7 @@
 ---
 name: pressure-test
 description: |
-  Stress-tests any decision, plan, or idea by generating the strongest case for and against, then delivering a forced verdict and concrete next steps. Use this skill for any decision question — even when the person doesn't frame it as a decision. Triggers include: "should I...", "is this a good idea", "what do you think about X", "I'm thinking of doing Y", "help me think through Z", "am I being stupid", "challenge my thinking", "argue against me", "is it worth it", "I can't decide", or any message where someone shares a situation and implicitly wants judgment. Also triggers when someone describes a plan, opportunity, or dilemma even without asking directly — "I got offered a job in Berlin" or "my manager wants me to take on a project" are decision questions. Use this skill generously. A question without pushback is just validation-seeking.
+  Stress-tests any decision and delivers a forced verdict with concrete next steps. Use for any decision question — even when not framed as one. Triggers include: "should I...", "is this a good idea", "what do you think about X", "I'm thinking of doing Y", "am I being stupid", "challenge my thinking", "argue against me", "I can't decide", or any situation where someone implicitly wants judgment. Triggers on indirect framings too — "I got offered a job in Berlin" or "my manager wants me to take on a project" are decision questions. Also triggers when someone shares a document, paper, or project and asks whether to submit, publish, or proceed — "should I publish this?" or "is this ready to send?" are decisions even with a file attached. Use this skill generously. A question without pushback is just validation-seeking.
 ---
 
 # Pressure Test
