@@ -1,40 +1,84 @@
-# Pressure Test — A Claude Skill for Real Decisions
+<div align="center">
 
-Most AI responses to "should I do X?" give you a list of things to consider. This skill gives you a verdict.
+# 🔍 Pressure Test
 
-**Pressure Test** stress-tests any decision by generating the strongest case for and against, then committing to a clear Yes / No / Unclear with specific next actions you can take this week — not balanced thoughts, not hedged advice, not things to reflect on.
+### A Claude skill that gives you a verdict — not a list of things to consider
 
----
+[![Claude Skill](https://img.shields.io/badge/Claude-Skill-orange?logo=anthropic&logoColor=white)](https://claude.ai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Works With](https://img.shields.io/badge/Works%20with-Claude.ai-blueviolet)](https://claude.ai/settings/skills)
 
-## What it does
-
-- Classifies your input (clear decision, decision buried in emotion, or pure feeling with no decision yet) and handles each correctly
-- Selects the right analytical framework for the decision type — career vs interpersonal vs financial vs mixed
-- Produces a verdict that follows from the analysis, not one that softens at the end
-- Names the specific next action you can take today or this week
-- Handles pushback: updates the verdict if you bring new information, holds it if you just disagree
+</div>
 
 ---
 
-## When it works best
+Most AI responses to *"should I do X?"* give you a balanced list of considerations. **Pressure Test** gives you a verdict.
 
-- Career and business decisions: job offers, quitting, cofounders, startups, stretch projects
-- Financial decisions: salary tradeoffs, equity, investments, spending
-- Personal decisions: habits, life changes, moves, big commitments
-- Interpersonal decisions: whether to say something, relationship choices, conflict
+It stress-tests any decision by building the strongest case for and against, committing to a clear **Yes / No / Unclear**, naming the specific failure mechanisms, and giving you a concrete next action you can take this week. No hedging. No "it depends." No things to reflect on.
 
-**When it works less well:** highly technical architecture or engineering decisions ("should I use Postgres or MongoDB?") where domain-specific tradeoffs matter more than judgment frameworks. A separate skill for that is in the works.
+<br>
 
----
+## ✨ What it does
 
-## Examples
+| | |
+|---|---|
+| 🧭 **Classifies your input** | Detects whether you have a clear decision, a decision buried in emotion, or a feeling with no decision yet — and handles each differently |
+| 🔬 **Picks the right framework** | Selects from Pre-Mortem, Reversibility Test, Regret Minimization, Cost of Silence, and more — based on whether your decision is professional, personal, or interpersonal |
+| ⚖️ **Commits to a verdict** | For stronger → Yes. Against stronger → No. Unclear only when a specific fact is missing that would materially change the answer |
+| 🎯 **Names the next action** | Specific enough to start today — not "do more research" or "talk to someone you trust" |
+| 🔄 **Handles pushback** | Updates the verdict if you bring new information. Holds it — and explains why — if you just disagree |
 
-### Career decision
+<br>
+
+## 📋 Works best for
+
+- **Career & business** — job offers, quitting, cofounders, equity, stretch projects, startups
+- **Financial** — salary tradeoffs, investments, equity vs cash, spending decisions
+- **Personal** — life changes, moves, big commitments, habits
+- **Interpersonal** — whether to say something, relationship choices, conflict
+
+> **⚠️ Works less well for:** highly technical architecture or engineering decisions (*"should I use Postgres or MongoDB?"*) where domain-specific tradeoffs matter more than judgment frameworks. A companion skill for technical decisions is in the works.
+
+<br>
+
+## 🚀 Installation
+
+1. Download **`pressure-test.skill`** from the [releases page](../../releases/latest)
+2. Go to [claude.ai](https://claude.ai) → **Settings** → **Skills**
+3. Click **Upload skill** and select the downloaded file
+4. Done — activates automatically when you describe any decision to Claude
+
+<br>
+
+## 💬 How to trigger it
+
+No special command needed. Just describe your decision naturally:
+
+```
+"Should I take this job offer?"
+"I'm thinking of moving cities — is this a bad idea?"
+"My cofounder and I can't agree on direction. What should I do?"
+"I've been offered equity instead of salary. Help me think through this."
+"I don't know if I should say something to my manager about this."
+```
+
+The skill catches indirect framings too — *"I got offered a job in Berlin"* triggers it just as well as *"should I move to Berlin?"*
+
+<br>
+
+## 📖 Examples
+
+<details>
+<summary><strong>Career decision — cofounder conflict</strong></summary>
+
+<br>
 
 **Input**
 > My cofounder and I have been fighting constantly for 3 months. He wants to pivot to enterprise, I think we should stay focused on SMB where we have traction. We're pre-Series A, $180k MRR, growing 8% MoM. Should I buy him out or just push through?
 
 **Output**
+
+---
 
 **Should I keep this cofounder dynamic as-is?**
 
@@ -61,12 +105,19 @@ Three months of unresolved strategic conflict at $180k MRR is a company-threaten
 
 ---
 
-### Decision buried in emotion
+</details>
+
+<details>
+<summary><strong>Decision buried in emotion — burnout</strong></summary>
+
+<br>
 
 **Input**
 > I've been so exhausted lately and I honestly don't know if I should quit my job. Maybe I'm just burned out and it'll pass. I don't know.
 
 **Output**
+
+---
 
 That kind of "maybe it's me, maybe it's the job" uncertainty is the hardest to sit with — and also the most important to resolve before making a move.
 
@@ -91,12 +142,19 @@ Burnout and a bad job look identical from the inside; the right answer depends e
 
 ---
 
-### Interpersonal decision
+</details>
+
+<details>
+<summary><strong>Interpersonal decision — telling a friend</strong></summary>
+
+<br>
 
 **Input**
 > Should I tell my best friend I have feelings for them?
 
 **Output**
+
+---
 
 **Should I tell my best friend I have feelings for them?**
 
@@ -125,49 +183,32 @@ The cost of staying quiet is already compounding, and unexpressed feelings at th
 
 ---
 
-## Installation
+</details>
 
-1. Download `pressure-test.skill` from the [releases page](../../releases)
-2. Go to [claude.ai](https://claude.ai) → Settings → Skills
-3. Click **Upload skill** and select the downloaded file
-4. Done — the skill activates automatically when you ask Claude about any decision
+<br>
 
----
-
-## How to trigger it
-
-You don't need a special command. Just describe your decision naturally:
-
-- *"Should I take this job offer?"*
-- *"I'm thinking of moving cities — is this a bad idea?"*
-- *"My cofounder and I can't agree on direction. What should I do?"*
-- *"I've been offered equity instead of salary. Help me think through this."*
-- *"I don't know if I should say something to my manager about this."*
-
-The skill also catches indirect framings — *"I got offered a job in Berlin"* triggers it just as well as *"should I move to Berlin?"*
-
----
-
-## Repo structure
+## 🗂️ Repo structure
 
 ```
 pressure-test/
-├── SKILL.md          # Core skill instructions and examples
-├── FRAMEWORKS.md     # Decision framework reference (Pre-Mortem, Reversibility Test, etc.)
-├── pressure-test.skill  # Packaged file for installation
+├── SKILL.md            # Core skill: routing logic, output format, hard rules
+├── FRAMEWORKS.md       # Six decision frameworks + anti-patterns + quality checks
+├── pressure-test.skill # Packaged file for installation
 └── README.md
 ```
 
-`SKILL.md` contains the routing logic, output format, and hard rules. `FRAMEWORKS.md` contains the six analytical frameworks the skill selects from based on decision type, plus the anti-patterns and output quality checks. Both files are included so you can read, fork, and improve either.
+Both `.md` files are included as source so you can read, fork, and improve either. The `.skill` file is what you upload to Claude — it bundles both.
 
----
+<br>
 
-## Contributing
+## 🤝 Contributing
 
-Issues and PRs welcome. If you find a decision type that produces weak output, open an issue with the input and what was wrong with the output — that's the most useful contribution. The skill has been tested across career, financial, interpersonal, mixed, vague, and emotional inputs, but real-world edge cases are the best source of improvements.
+Issues and PRs welcome. The most useful contribution is a real decision type that produces weak output — open an issue with the input and what was wrong with the response, and it'll get fixed.
 
----
+The skill has been tested across career, financial, interpersonal, mixed, vague, emotional, mental health adjacent, and pushback inputs. Real-world edge cases are the best source of improvements.
 
-## License
+<br>
 
-MIT
+## 📄 License
+
+[MIT](LICENSE)
